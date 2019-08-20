@@ -1,0 +1,172 @@
+﻿
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        /* Style the header */
+        header {
+            background-color: #9de1bf;
+            padding: 30px;
+            text-align: left;
+            font-size: 35px;
+            color: white;
+        }
+        input {
+            width: 100%;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 30%;
+            height: 300px; /* only for demonstration, should be removed */
+            background: #ccc;
+            padding: 20px;
+        }
+
+
+            /* Style the list inside the menu */
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+         
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 70%;
+            background-color: #aef5f7;
+            height: 300px; /* only for demonstration, should be removed */
+        }
+
+
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+
+        /* Style the footer */
+        footer {
+            background-color: #9de1bf;
+            padding: 10px;
+            /*text-align: center;*/
+            color: white;
+        }
+
+
+        .about {
+            text-align: center;
+        }
+
+        .contact {
+            text-align: right;
+        }
+
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+        .center {
+            text-align: center;
+        }
+
+
+            .center > a {
+                padding: 4px 10%;
+            }
+
+
+                .center > a:hover {
+                    background: grey;
+                    color: aliceblue;
+                }
+
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+            nav, article {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+
+        nav > div {
+            margin: 8px 0;
+            padding: 4px 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+
+            nav > div:hover {
+            }
+    </style>
+
+    <meta charset="utf-8">
+    <title>page</title>
+</head>
+<body>
+    <header>
+        <img src="image.png" alt="logo">
+    </header>
+    <section>
+        <nav>
+            <div style="border:1px solid #808080; background-color:#808080;"> <a>To Do</a> </div>
+            <div style="border:1px solid #808080; background-color:#808080;"> <a>User</a> </div>
+            <div style="border:1px solid #808080; background-color:#808080;"> <a>Login</a> </div>
+        </nav>
+
+
+        <article class="main">
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+        </article>
+
+    </section>
+    <footer>
+        <p class="center">
+            <a href="C:/Users/vitripathi/Desktop/Website/Website/Home.html">Home</a>
+            <a href="C:/Users/vitripathi/Desktop/Website/Website/About.htm" class="about">About</a>
+            <a href="C:/Users/vitripathi/Desktop/Website/Website/contactUs.htm" class="contact">Contact us</a>
+        </p>
+
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
