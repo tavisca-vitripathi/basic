@@ -15,9 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="HTMLPage.htm" />
     <None Include="contactUs.htm" />
-    <None Include="Home.html" />
     <None Include="About.htm" />
   </ItemGroup>
 </Project>

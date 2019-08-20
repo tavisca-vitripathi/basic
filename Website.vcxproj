@@ -121,10 +121,6 @@
     <None Include="contactUs.htm">
       <DeploymentContent>true</DeploymentContent>
     </None>
-    <None Include="Home.html" />
-    <None Include="HTMLPage.htm">
-      <DeploymentContent>true</DeploymentContent>
-    </None>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
