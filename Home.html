@@ -1,128 +1,152 @@
-﻿
-<!-- saved from url=(0061)file:///C:/Users/vitripathi/Desktop/Website/Website/Home.html -->
-<html lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
+﻿<!-- saved from url=(0061)file:///C:/Users/vitripathi/Desktop/Website/Website/Home.html -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
 
 
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
 
-        /* Style the header */
-        header {
-            background-color: #9de1bf;
-            padding: 30px;
-            text-align: left;
-            font-size: 35px;
-            color: white;
-        }
-        input {
-            width: 100%;
-        }
-
-        /* Create two columns/boxes that floats next to each other */
-        nav {
-            float: left;
-            width: 30%;
-            height:90%; /* only for demonstration, should be removed */
-            background: #ccc;
-            padding: 20px;
-        }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
 
-            /* Style the list inside the menu */
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
+    /* Style the header */
+    header {
+        background-color: #9de1bf;
+        padding: 30px;
+        text-align: left;
+        font-size: 35px;
+        color: white;
+    }
 
-         
+    input {
+        width: 100%;
+    }
 
+    /* Create two columns/boxes that floats next to each other */
+    nav {
+        float: left;
+        width: 30%;
+        height: 90%;
+        /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+    }
+
+
+    /* Style the list inside the menu */
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+
+
+    article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #aef5f7;
+        height: 90%;
+        /* only for demonstration, should be removed */
+    }
+
+
+
+    /* Clear floats after the columns */
+    section:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+
+    /* Style the footer */
+    footer {
+        background-color: #9de1bf;
+        padding: 10px;
+        /*text-align: center;*/
+        color: white;
+    }
+
+
+    .about {
+        text-align: center;
+    }
+
+    .contact {
+        text-align: right;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+
+    .center {
+        text-align: center;
+    }
+
+
+    .center>a {
+        padding: 4px 10%;
+    }
+
+
+    .center>a:hover {
+        background: grey;
+        color: aliceblue;
+    }
+
+    #myInput{
+        width: 90%;
+        height: 5%;
+        font-size: 1vw;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+    @media (max-width: 600px) {
+
+        nav,
         article {
-            float: left;
-            padding: 20px;
-            width: 70%;
-            background-color: #aef5f7;
-            height:90%; /* only for demonstration, should be removed */
+            width: 100%;
+            height: auto;
         }
+    }
 
 
-
-        /* Clear floats after the columns */
-        section:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-
-        /* Style the footer */
-        footer {
-            background-color: #9de1bf;
-            padding: 10px;
-            /*text-align: center;*/
-            color: white;
-        }
-
-
-        .about {
-            text-align: center;
-        }
-
-        .contact {
-            text-align: right;
-        }
+    nav>div {
+        margin: 8px 0;
+        padding: 4px 0;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .modal{
+        visibility: hidden;
+        top: 30vh;
+        position: fixed;
+        left: 40vw;
+        width: 30vw;
+        height: 30vh;
+        z-index: 10;
+        background-color: aquamarine;
+    }
 
 
-        a {
-            text-decoration: none;
-            color: #fff;
-        }
+    nav>div:hover {}
+</style>
 
-
-        .center {
-            text-align: center;
-        }
-
-
-            .center > a {
-                padding: 4px 10%;
-            }
-
-
-                .center > a:hover {
-                    background: grey;
-                    color: aliceblue;
-                }
-
-
-        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-        @media (max-width: 600px) {
-            nav, article {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-
-        nav > div {
-            margin: 8px 0;
-            padding: 4px 0;
-            text-align: center;
-            font-size: 1.5rem;
-        }
-
-
-            nav > div:hover {
-            }
-    </style>
 <title>page</title>
 
 <body>
@@ -138,9 +162,25 @@
 
 
         <article class="main">
-            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+            <div id="myInputa">
+                <input type="text" id="myInput" placeholder="Add names.." title="Type in a name">
+                <button type="button "style="height:5%; width:9%;" name="button" onclick="addToList()">Add</button>
+                <br><br>
+                <div class="modal" id="modal">
+                    <input type="text" id="myinputs" placeholder="Edit..." title="Type in a name">
+                    <button  onclick ="Edit()">Update  </button>
+                    <button  onClick="CloseModel()">Close</button>
+                </div>
+                <table id="tableis" style="width:100%">
+                    
+                </table>
+
+            </div>
 
         </article>
+
+
+
 
     </section>
     <footer>
@@ -151,5 +191,7 @@
         </p>
 
     </footer>
+    <script src="./script.js"></script>
 </body>
+
 </html>
